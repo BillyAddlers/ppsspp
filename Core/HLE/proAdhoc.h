@@ -669,6 +669,7 @@ enum {
 #define OPCODE_SCAN_COMPLETE 5
 #define OPCODE_CONNECT_BSSID 6
 #define OPCODE_CHAT 7
+#define OPCODE_OVPN 8
 
 // PSP Product Code
 #define PRODUCT_CODE_LENGTH 9
@@ -739,6 +740,18 @@ typedef struct {
   SceNetAdhocctlChatPacketC2S base;
   SceNetAdhocctlNickname name;
 } PACK SceNetAdhocctlChatPacketS2C;
+
+// C2S OpenVPN Packet
+typedef struct {
+	SceNetAdhocctlPacketBase base;
+} PACK SceNetAdhocctlOpenVPNPacketC2S;
+
+// S2C OpenVPN Packet
+typedef struct {
+	SceNetAdhocctlPacketBase base;
+	SceNetAdhocctlNickname name;
+	char ovpnID[32];
+} PACK SceNetAdhocctlOpenVPNPacketS2C;
 
 // P2P Packet
 typedef struct {
