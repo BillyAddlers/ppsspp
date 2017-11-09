@@ -680,6 +680,7 @@
     <ClCompile Include="FileSystems\BlobFileSystem.cpp">
       <Filter>FileSystems</Filter>
     </ClCompile>
+    <ClCompile Include="HLE\AmultiosChatClient.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ELF\ElfReader.h">
@@ -1250,6 +1251,7 @@
     <ClInclude Include="FileSystems\BlobFileSystem.h">
       <Filter>FileSystems</Filter>
     </ClInclude>
+    <ClInclude Include="HLE\AmultiosChatClient.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="CMakeLists.txt" />

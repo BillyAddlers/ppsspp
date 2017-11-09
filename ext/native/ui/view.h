@@ -793,15 +793,14 @@ public:
 	Event OnTextChange;
 	Event OnEnter;
 
-private:
-	void InsertAtCaret(const char *text);
-
 	std::string text_;
-	std::string undo_;
-	std::string placeholderText_;
-	uint32_t textColor_;
 	bool hasTextColor_ = false;
 	int caret_;
+	uint32_t textColor_;
+	std::string placeholderText_;
+private:
+	void InsertAtCaret(const char *text);
+	std::string undo_;
 	size_t maxLen_;
 	bool ctrlDown_ = false;  // TODO: Make some global mechanism for this.
 	// TODO: Selections

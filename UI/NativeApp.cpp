@@ -80,7 +80,7 @@
 #include "Core/System.h"
 #include "Core/HLE/__sceAudio.h"
 #include "Core/HLE/sceCtrl.h"
-#include "Core/HLE/proAdhoc.h"
+#include "Core/HLE/AmultiosChatClient.h"
 #include "Core/Util/GameManager.h"
 #include "Core/Util/AudioFormat.h"
 #include "GPU/GPUInterface.h"
@@ -342,7 +342,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
 	// Maybe there should be an option to use internal memory instead, but I think
 	// that for most people, using external memory (SDCard/USB Storage) makes the
 	// most sense.
-	g_Config.memStickDirectory = std::string(external_dir) + "/";
+	g_Config.memStickDirectory = std::string(external_dir) + "/amultios/";
 	g_Config.flash0Directory = std::string(external_dir) + "/flash0/";
 #elif defined(IOS)
 	g_Config.memStickDirectory = user_data_path;

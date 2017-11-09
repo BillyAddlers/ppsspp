@@ -54,7 +54,7 @@
 #include "Core/SaveState.h"
 #include "Core/MIPS/MIPS.h"
 #include "Core/HLE/__sceAudio.h"
-#include "Core/HLE/proAdhoc.h"
+#include "Core/HLE/AmultiosChatClient.h"
 
 #include "UI/ui_atlas.h"
 #include "UI/BackgroundAudio.h"
@@ -863,7 +863,7 @@ UI::EventReturn EmuScreen::OnDevTools(UI::EventParams &params) {
 UI::EventReturn EmuScreen::OnChat(UI::EventParams &params) {
 	releaseButtons();
 	if(chatButtons->GetVisibility() == UI::V_VISIBLE) chatButtons->SetVisibility(UI::V_GONE);
-	screenManager()->push(new ChatMenu());
+	screenManager()->push(new ChatScreen());
 	return UI::EVENT_DONE;
 }
 
