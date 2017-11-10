@@ -41,7 +41,7 @@ if(CMAKE_SYSTEM_PROCESSOR)
 	  add_definitions(-DARM64)
 	elseif(${CMAKE_SYSTEM_PROCESSOR} MATCHES "^amd64" OR ${CMAKE_SYSTEM_PROCESSOR} MATCHES "^x86_64" OR ${CMAKE_SYSTEM_PROCESSOR} MATCHES "^AMD64")
 		set(X86 ON)
-    set(X86_64 ON)
+    	set(X86_64 ON)
 	elseif(${CMAKE_SYSTEM_PROCESSOR} MATCHES "^x86" OR ${CMAKE_SYSTEM_PROCESSOR} MATCHES "i.86")
 		set(X86 ON)
 	elseif(${CMAKE_SYSTEM_PROCESSOR} MATCHES "^mips")
@@ -758,6 +758,8 @@ list(APPEND NativeAppSource
 	UI/NativeApp.cpp
 	UI/BackgroundAudio.cpp
 	UI/ChatScreen.cpp
+	UI/ChatOnScreen.cpp
+	UI/ChatOnScreen.h
 	UI/DevScreens.cpp
 	UI/DisplayLayoutEditor.cpp
 	UI/DisplayLayoutScreen.cpp
@@ -779,7 +781,6 @@ list(APPEND NativeAppSource
 	UI/ReportScreen.cpp
 	UI/SavedataScreen.cpp
 	UI/Store.cpp
-	UI/CwCheatScreen.cpp
 	UI/InstallZipScreen.cpp
 	UI/ProfilerDraw.cpp
 	UI/ui_atlas.cpp
@@ -1315,8 +1316,6 @@ add_library(${CoreLibName} ${CoreLinkType}
 	Core/CoreParameter.h
 	Core/CoreTiming.cpp
 	Core/CoreTiming.h
-	Core/CwCheat.cpp
-	Core/CwCheat.h
 	Core/HDRemaster.cpp
 	Core/HDRemaster.h
 	Core/ThreadEventQueue.h
@@ -1371,6 +1370,8 @@ add_library(${CoreLibName} ${CoreLinkType}
 	Core/FileSystems/VirtualDiscFileSystem.h
 	Core/Font/PGF.cpp
 	Core/Font/PGF.h
+	Core/HLE/AmultiosChatClient.cpp
+	Core/HLE/AmultiosChatClient.h
 	Core/HLE/FunctionWrappers.h
 	Core/HLE/HLE.cpp
 	Core/HLE/HLE.h

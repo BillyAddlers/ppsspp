@@ -40,6 +40,10 @@ UWP/icph
 
 # For Mac
 .DS_Store
+CMakeFiles
+*.a
+*.plist
+
 
 # For ppsspp.ini, etc.
 ppsspp.ini
@@ -97,3 +101,4 @@ debian/ppsspp/
 
 # YouCompleteMe file
 .ycm_extra_conf.pyc
+
