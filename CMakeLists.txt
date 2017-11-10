@@ -759,7 +759,6 @@ list(APPEND NativeAppSource
 	UI/BackgroundAudio.cpp
 	UI/ChatScreen.cpp
 	UI/ChatOnScreen.cpp
-	UI/ChatOnScreen.h
 	UI/DevScreens.cpp
 	UI/DisplayLayoutEditor.cpp
 	UI/DisplayLayoutScreen.cpp
