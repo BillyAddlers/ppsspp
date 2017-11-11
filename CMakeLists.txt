@@ -779,7 +779,6 @@ list(APPEND NativeAppSource
 	UI/ReportScreen.cpp
 	UI/SavedataScreen.cpp
 	UI/Store.cpp
-	UI/CwCheatScreen.cpp
 	UI/InstallZipScreen.cpp
 	UI/ProfilerDraw.cpp
 	UI/ui_atlas.cpp
@@ -1315,8 +1314,6 @@ add_library(${CoreLibName} ${CoreLinkType}
 	Core/CoreParameter.h
 	Core/CoreTiming.cpp
 	Core/CoreTiming.h
-	Core/CwCheat.cpp
-	Core/CwCheat.h
 	Core/HDRemaster.cpp
 	Core/HDRemaster.h
 	Core/ThreadEventQueue.h
@@ -1371,6 +1368,8 @@ add_library(${CoreLibName} ${CoreLinkType}
 	Core/FileSystems/VirtualDiscFileSystem.h
 	Core/Font/PGF.cpp
 	Core/Font/PGF.h
+	Core/HLE/AmultiosChatClient.cpp
+	Core/HLE/AmultiosChatClient.h
 	Core/HLE/FunctionWrappers.h
 	Core/HLE/HLE.cpp
 	Core/HLE/HLE.h
